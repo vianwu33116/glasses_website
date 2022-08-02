@@ -28,6 +28,7 @@
     }
     .header-link {
       font-size: 20px;
+      font-weight: bold;
       padding: 25px 32px;
       @include mobile-phone() {
         width: 100%;
@@ -45,19 +46,34 @@
 //---------------sub-header-------------------------
 .sub-header {
   background: $danger;
-  @include mobile-phone(){
-    display: none;
-  }
   .header-list{
     margin: 0 -24px;
+    @include mobile-phone(){
+      margin: 0;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .list-item{
+      @include mobile-phone() {
+        width: auto;
+        border: none;
+      }
+    }
     .header-link{
       padding: 12px 24px;
+      @include mobile-phone() {
+        padding: 12px;
+        width: auto;
+      }
     }
   }
   .icon-container {
     justify-content: center;
     align-items: center;
     margin-right: 30px;
+    @include mobile-phone(){
+      display: none;
+    }
   }
 }
 
