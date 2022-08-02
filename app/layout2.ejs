@@ -6,12 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%- title %></title>
     <link rel="stylesheet" href="./assets/style/all.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
-
   <body>
     <header class="bg-main">
       <div class="header-container d-flex container">
@@ -36,6 +32,27 @@
         </ul>
       </div>
     </header>
+    <div class="sub-header">
+      <div class="header-container container d-flex">
+        <ul class="header-list d-flex">
+          <li class="list-item">
+            <a href="#" class="header-link link">最新消息</a>
+          </li>
+          <li class="list-item">
+            <a href="#" class="header-link link">特別企劃</a>
+          </li>
+          <li class="list-item">
+            <a href="#" class="header-link link">新品上市</a>
+          </li>
+          <li class="list-item">
+            <a href="#" class="header-link link">鏡框小知識</a>
+          </li>
+        </ul>
+        <div class="icon-container d-flex">
+          <img src="./assets/images/search.png" alt="search" class=".icon">
+        </div>
+      </div>
+    </div>
 
     <%- contents %>
 

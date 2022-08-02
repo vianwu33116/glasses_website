@@ -1,0 +1,25 @@
+.question-content {
+  .sec-title {
+    @include font-larger;
+  }
+  .question-list {
+    .list-item {
+      @include mobile-phone() {
+        margin-bottom: 24px;
+      }
+      .thr-title {
+        font-size: 20px;
+      }
+      .txt {
+        @include font-normal;
+        width: 71.3%;
+        @include ipad() {
+          width: 92%;
+        }
+        @include mobile-phone() {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

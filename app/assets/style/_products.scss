@@ -1,0 +1,143 @@
+//---------------optical-------------------------
+.products-content {
+  .products-nav {
+    @include mobile-phone() {
+      padding: 0;
+    }
+    .list-item {
+      border: 1px solid #dcdcdc;
+      width: 33.3%;
+      height: 96px;
+      @include ipad() {
+        height: 68px;
+      }
+      @include mobile-phone() {
+        height: 56px;
+      }
+      &:hover {
+        border-bottom: 8px solid $main;
+      }
+      .link {
+        width: 100%;
+        color: $normal;
+        text-decoration: none;
+        padding: 24px 0;
+        text-align: center;
+        font-size: 32px;
+        @include ipad() {
+          @include font-larger;
+          padding: 16px 48px;
+        }
+        @include mobile-phone() {
+          @include font-normal;
+          padding: 16px 12px;
+        }
+      }
+    }
+  }
+  .products-banner {
+    @include mobile-phone() {
+      margin-bottom: 40px;
+    }
+    .banner-img {
+      width: 50%;
+    }
+  }
+  .products-title {
+    text-align: center;
+    font-size: 42px;
+    @include mobile-phone() {
+      @include font-larger;
+      margin-bottom: 24px;
+    }
+    .title-span {
+      font-size: 32px;
+      @include mobile-phone() {
+        @include font-larger;
+      }
+    }
+  }
+  .products-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    @include mobile-phone() {
+      margin-bottom: 40px;
+    }
+    .product {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+    .product-img {
+      width: 282px;
+      @include ipad() {
+        width: 336px;
+      }
+      @include mobile-phone() {
+        width: 100%;
+      }
+    }
+    .container {
+      justify-content: space-between;
+      @include font-larger;
+      .price {
+        color: $main;
+        font-weight: bold;
+      }
+    }
+    .color-list {
+      width: 56px;
+      margin-bottom: 80px;
+      @include mobile-phone() {
+        margin-bottom: 24px;
+      }
+      .list-item {
+        width: 24px;
+        height: 24px;
+        &:nth-child(1) {
+          background: #5f3e2d;
+        }
+        &:nth-child(2) {
+          background: #b75929;
+        }
+      }
+    }
+  }
+}
+.page-list {
+  justify-content: center;
+  @include mobile-phone() {
+    margin-bottom: 64px;
+  }
+  .list-item {
+    border: 1px solid #555555;
+    font-size: 19px;
+    line-height: 26px;
+    @include mobile-phone() {
+      font-size: 16px;
+      line-height: 21px;
+    }
+    .link {
+      color: $normal;
+      padding: 12px 15px;
+      text-decoration: none;
+      &:hover {
+        color: $light;
+        background: $normal;
+      }
+    }
+  }
+}
+
+//---------------glasses-------------------------
+.products-content {
+  .glasses-list {
+    .product {
+      .product-img {
+        width: 384px;
+        @include mobile-phone() {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

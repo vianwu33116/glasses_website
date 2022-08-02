@@ -1,0 +1,159 @@
+//---------------header-------------------------
+.header-container {
+  justify-content: space-between;
+  @include mobile-phone() {
+    padding: 0;
+    flex-direction: column;
+  }
+  .logo-container {
+    text-align: center;
+    .logo {
+      width: 80px;
+      height: 48.57px;
+      margin: 12px 0;
+    }
+  }
+  .header-list {
+    color: $light;
+    justify-content: center;
+    @include mobile-phone() {
+      flex-wrap: wrap;
+    }
+    .list-item {
+      @include mobile-phone() {
+        width: 50%;
+        text-align: center;
+        border: 1px solid $light;
+      }
+    }
+    .header-link {
+      font-size: 20px;
+      padding: 25px 32px;
+      @include mobile-phone() {
+        width: 100%;
+        text-align: center;
+        @include font-normal;
+      }
+      &:hover {
+        background: $normal;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+//---------------sub-header-------------------------
+.sub-header {
+  background: $danger;
+  @include mobile-phone(){
+    display: none;
+  }
+  .header-list{
+    margin: 0 -24px;
+    .header-link{
+      padding: 12px 24px;
+    }
+  }
+  .icon-container {
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+}
+
+//---------------footer-----------------------------
+.footer-container {
+  padding: 60px 12px 32px;
+  color: $light;
+  @include mobile-phone() {
+    padding: 24px 12px;
+  }
+  .footer-box {
+    border-bottom: 1px solid $light;
+    @include mobile-phone() {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-bottom: 24px;
+      margin-bottom: 16px;
+    }
+    .d-flex {
+      justify-content: space-between;
+      .list {
+        align-items: center;
+        line-height: 24px;
+        @include mobile-phone() {
+          display: none;
+        }
+      }
+    }
+    .footer-icons {
+      .footer-icon {
+        .icon-img {
+          width: 48px;
+          height: 48px;
+          margin-left: 16px;
+          margin-right: 16px;
+          @include ipad() {
+            width: 40px;
+            height: 40px;
+            margin-left: 8px;
+            margin-right: 8px;
+          }
+          @include mobile-phone() {
+            width: 24px;
+            height: 24px;
+          }
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    .contact-container {
+      .contact {
+        font-size: 36px;
+        @include mobile-phone() {
+          @include font-normal;
+        }
+        .contact-icon {
+          font-size: 36px;
+          vertical-align: middle;
+          @include mobile-phone() {
+            @include font-larger;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .right-container {
+    justify-content: space-between;
+    line-height: 21px;
+    @include mobile-phone() {
+      flex-direction: column;
+      @include font-normal;
+      .copy-right {
+        margin-bottom: 8px;
+      }
+    }
+    .privacy-list {
+      justify-content: space-between;
+      font-size: 14px;
+      @include mobile-phone() {
+        flex-direction: column;
+      }
+      .list-item {
+        &:nth-child(2) {
+          margin-left: 48px;
+        }
+        @include mobile-phone() {
+          margin-bottom: 8px;
+          &:nth-child(2) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

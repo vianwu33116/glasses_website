@@ -1,27 +1,138 @@
-$main: #AA0601;
-$light: #FFFFFF;
+$main: #aa0601;
+$light: #ffffff;
 $normal: #000000;
 $danger: #650300;
-$light-bg: #FBF2F2;
-@mixin font-normal {
-    font-size: 16px;
-    line-height: 24px;
+$light-bg: #fbf2f2;
+$distance: 8px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-@mixin font-larger {
-    font-size: 24px;
-    line-height: 36px;
+
+body {
+  font-family: "Noto Sans TC", "Roboto", sans-serif;
+  line-height: 1.5;
 }
-@mixin mw1 {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
-@mixin danger{
-    color: $danger;
-    font-weight: bold;
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
 }
-@mixin bg-img {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  color: $light;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.mb-1 {
+  margin-bottom: $distance;
+}
+
+.mb-2 {
+  margin-bottom: $distance * 2;
+}
+
+.mb-3 {
+  margin-bottom: $distance * 3;
+}
+
+.mb-4 {
+  margin-bottom: $distance * 4;
+}
+
+.mb-6 {
+  margin-bottom: $distance * 6;
+}
+
+.mb-10 {
+  margin-bottom: $distance * 10;
+}
+
+.pb-3 {
+  padding-bottom: $distance * 3;
+}
+
+.pb-4 {
+  padding-bottom: $distance * 4;
+}
+
+.light-bg {
+  background: $light-bg;
+}
+
+.btn {
+  color: $light;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.special-font {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.bg-main {
+  background: $main;
+}
+
+.title-b {
+  font-weight: bold;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 72px;
+  border-left: 8px solid $main;
+  margin-top: 96px;
+  margin-bottom: 32px;
+  padding-left: 16px;
+}
+
+.ml-8 {
+  margin-left: 48px;
+}
+
+.mr-10 {
+  margin-right: 100px;
+}
+
+//---------------overall media--------------------------------
+
+@media (max-width: 992px) {
+  .mr-10 {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    @include font-larger;
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  .ml-8 {
+    margin-left: 8px;
+  }
 }

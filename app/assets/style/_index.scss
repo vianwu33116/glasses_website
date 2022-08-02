@@ -1,0 +1,209 @@
+.index-content {
+  .banner {
+    background-image: url(../images/home-header.png);
+    @include bg-img;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    color: $danger;
+    @include ipad() {
+      background-image: url(../images/home-header-sm.png);
+      height: 787px;
+    }
+    @include mobile-phone() {
+      height: 396px;
+    }
+    .index-title {
+      font-size: 36px;
+      @include mobile-phone() {
+        @include font-normal;
+      }
+    }
+    .slogan {
+      font-size: 64px;
+      margin-bottom: 10px;
+      @include mobile-phone() {
+        @include font-larger;
+      }
+    }
+    .buy {
+      font-size: 20px;
+      background: $main;
+      border: none;
+      padding: 6px 12px;
+      &:hover {
+        background: $normal;
+      }
+    }
+  }
+  .article {
+    .sec-title {
+      font-size: 48px;
+      line-height: 72px;
+      text-align: center;
+      margin-bottom: 32px;
+      @include danger;
+      font-weight: bold;
+      @include mobile-phone(){
+        @include font-larger;
+      }
+    }
+  }
+  .art-1 {
+    padding: 80px 12px;
+    .pro-list {
+      justify-content: center;
+      @include ipad(){
+        flex-wrap: wrap;
+      }
+
+      .list-item {
+        text-align: center;
+        width: 25%;
+        margin: 0 12px;
+        @include ipad(){
+          margin-bottom: 20px;
+          width: 40%;
+        }
+        @include mobile-phone(){
+          width: 60%;
+        }
+        .pro-icon {
+          width: 83.83px;
+          height: 83.83px;
+        }
+        .thr-title {
+          @include font-larger;
+          @include danger;
+          font-weight: bold;
+        }
+        .txt {
+          @include font-normal;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .art-2 {
+    .products-type {
+      @include ipad(){
+        flex-direction: column;
+        align-items: center;
+      }
+      .list-item {
+        margin: 0 12px;
+        .font-main {
+          color: $main;
+          @include ipad(){
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+  }
+  .art-3 {
+    background-image: url(../images/index-bg.png);
+    @include bg-img;
+    padding: 80px 0;
+    .sec-title {
+      color: $light;
+    }
+    .join-container {
+      .join-list {
+        @include ipad(){
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+    .list-item {
+      .join-name {
+        color: $main;
+      }
+    }
+  }
+  .art-4 {
+    .comment-list {
+      @include ipad(){
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .list-item {
+        border: 1px solid #dee2e6;
+        box-shadow: 0px 2px 6px #00000029;
+        margin: 0 12px;
+        @include ipad(){
+          margin-bottom: 24px;
+          width: 45%;
+        }
+        @include mobile-phone(){
+          width: 100%;
+        }
+        .d-flex{
+          flex-direction: column;
+          justify-content: space-between;
+          height: 205px;
+          padding: 16px;
+          @include font-normal;
+          @include mobile-phone(){
+            height: auto;
+            .contxt{
+              margin-bottom: 48px;
+            }
+          }
+          .contxt {
+            .customer-name {
+              margin-bottom: 8px;
+            }
+          }
+          .date {
+            font-size: 14px;
+            line-height: 21x;
+            color: #707070;
+          }
+        }
+      }
+    }
+  }
+  .contact-us {
+    padding: 80px 0;
+    .contact-form {
+      width: 45%;
+      margin: 0 auto;
+      @include font-normal;
+      @include ipad(){
+        width: 75%;
+      }
+      @include mobile-phone(){
+        width: 100%;
+        padding: 0 12px;
+      }
+      .contact-item{
+        display: block;
+      }
+      .input {
+        width: 100%;
+        height: 36px;
+      }
+      .textarea {
+        width: 100%;
+      }
+      .agree {
+        display: block;
+      }
+      .submit-container {
+        width: 65%;
+        margin: 0 auto;
+        .submit {
+          width: 100%;
+          padding: 16px 0;
+          border: none;
+          &:hover {
+            background: $normal;
+          }
+        }
+      }
+    }
+  }
+}
