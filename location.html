@@ -13,42 +13,47 @@
   </head>
 
   <body>
-    <header class="header container">
-      <div class="logo-container">
-        <img src="./assets/images/logo-white.png" alt="logo" class="logo" />
+    <header class="bg-main">
+      <div class="header-container d-flex container">
+        <div class="logo-container">
+          <a href="./index.html" class="logo-link">
+            <img src="./assets/images/logo-white.png" alt="logo" class="logo" />
+          </a>
+        </div>
+        <ul class="header-list d-flex">
+          <li class="list-item">
+            <a href="./optical.html" class="header-link link">系列鏡框</a>
+          </li>
+          <li class="list-item">
+            <a href="./location.html" class="header-link link">門市據點</a>
+          </li>
+          <li class="list-item">
+            <a href="./blog.html" class="header-link link">部落格</a>
+          </li>
+          <li class="list-item">
+            <a href="./question.html" class="header-link link">常見問題</a>
+          </li>
+        </ul>
       </div>
-      <ul class="header-list container">
-        <li class="list-item">
-          <a href="./optical.html" class="header-link link">系列鏡框</a>
-        </li>
-        <li class="list-item">
-          <a href="./location.html" class="header-link link">門市據點</a>
-        </li>
-        <li class="list-item">
-          <a href="#" class="header-link link">部落格</a>
-        </li>
-        <li class="list-item">
-          <a href="./question.html" class="header-link link">常見問題</a>
-        </li>
-      </ul>
     </header>
 
     
-<div class="location-content">
+<div class="location-content container">
   <h1 class="title title-b">門市據點</h1>
-  <div class="search-box container">
+  <div class="search-box d-flex">
     <p class="pick">選擇地區</p>
     <select name="name" id="select" class="store-choice">
-      <option value="台北市">台北市</option>
-      <option value="台中市">台中市</option>
-      <option value="高雄市">高雄市</option>
+      <option class="store-pickup" value="overall" selected>全部</option>
+      <option class="store-pickup" value="taipei">台北市</option>
+      <option class="store-pickup" value="taichung">台中市</option>
+      <option class="store-pickup" value="kaohsiung">高雄市</option>
     </select>
   </div>
-  <ul class="location-list container">
+  <ul class="location-list d-flex mb-4">
     <li class="list-item">
       <img src="./assets/images/store-1.png" alt="store" class="store-img" />
       <h2 class="sec-title">台北旗艦店</h2>
-      <ul class="info-list container">
+      <ul class="info-list d-flex">
         <li class="info-icons">
           <span class="material-symbols-outlined info-icon"> call </span>
           <span class="material-symbols-outlined info-icon"> schedule </span>
@@ -63,9 +68,9 @@
       <div class="more-info">詳細資訊</div>
     </li>
     <li class="list-item">
-        <img src="./assets/images/store-1.png" alt="store" class="store-img" />
+        <img src="./assets/images/store-2.png" alt="store" class="store-img" />
         <h2 class="sec-title">台北綠園店</h2>
-        <ul class="info-list container">
+        <ul class="info-list d-flex">
           <li class="info-icons">
             <span class="material-symbols-outlined info-icon"> call </span>
             <span class="material-symbols-outlined info-icon"> schedule </span>
@@ -80,9 +85,9 @@
         <div class="more-info">詳細資訊</div>
       </li>
       <li class="list-item">
-        <img src="./assets/images/store-1.png" alt="store" class="store-img" />
+        <img src="./assets/images/store-3.png" alt="store" class="store-img" />
         <h2 class="sec-title">台中清水旗艦店</h2>
-        <ul class="info-list container">
+        <ul class="info-list d-flex">
           <li class="info-icons">
             <span class="material-symbols-outlined info-icon"> call </span>
             <span class="material-symbols-outlined info-icon"> schedule </span>
@@ -97,9 +102,9 @@
         <div class="more-info">詳細資訊</div>
       </li>
       <li class="list-item">
-        <img src="./assets/images/store-1.png" alt="store" class="store-img" />
+        <img src="./assets/images/store-4.png" alt="store" class="store-img" />
         <h2 class="sec-title">高雄中正形象店</h2>
-        <ul class="info-list container">
+        <ul class="info-list d-flex">
           <li class="info-icons">
             <span class="material-symbols-outlined info-icon"> call </span>
             <span class="material-symbols-outlined info-icon"> schedule </span>
@@ -114,9 +119,9 @@
         <div class="more-info">詳細資訊</div>
       </li>
       <li class="list-item">
-        <img src="./assets/images/store-1.png" alt="store" class="store-img" />
+        <img src="./assets/images/store-5.png" alt="store" class="store-img" />
         <h2 class="sec-title">高雄夢時代店</h2>
-        <ul class="info-list container">
+        <ul class="info-list d-flex">
           <li class="info-icons">
             <span class="material-symbols-outlined info-icon"> call </span>
             <span class="material-symbols-outlined info-icon"> schedule </span>
@@ -134,77 +139,86 @@
 </div>
 
 
-    <footer class="footer">
-      <div class="footer-box">
-        <div class="footer-container container">
-          <ul class="footer-list container">
+    <footer class="bg-main">
+      <div class="footer-container container">
+        <div class="footer-box mb-4 pb-4">
+          <div class="d-flex mb-3">
+            <ul class="list d-flex">
+              <li class="list-item">
+                <a href="./index.html" class="footer-link link">首頁</a>
+              </li>
+              <li class="list-item">
+                <a href="./optical.html" class="footer-link link ml-8"
+                  >系列鏡框</a
+                >
+              </li>
+              <li class="list-item">
+                <a href="./location.html" class="footer-link link ml-8"
+                  >門市據點</a
+                >
+              </li>
+              <li class="list-item">
+                <a href="./blog.html" class="footer-link link ml-8">部落格</a>
+              </li>
+              <li class="list-item">
+                <a href="./question.html" class="footer-link link ml-8"
+                  >常見問題</a
+                >
+              </li>
+            </ul>
+            <ul class="footer-icons d-flex">
+              <li class="footer-icon">
+                <a href="#" class="icon-link"
+                  ><img
+                    src="./assets/images/ic-social-fb.png"
+                    alt="facebook icon"
+                    class="icon-img"
+                /></a>
+              </li>
+              <li class="footer-icon">
+                <a href="#" class="icon-link"
+                  ><img
+                    src="./assets/images/ic_social_ig.png"
+                    alt="ig-icon"
+                    class="icon-img"
+                /></a>
+              </li>
+              <li class="footer-icon">
+                <a href="#" class="icon-link"
+                  ><img
+                    src="./assets/images/ic_social_line.png"
+                    alt="line-icon"
+                    class="icon-img"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-container">
+            <p class="contact tel">
+              <span class="material-symbols-outlined contact-icon"> call </span>
+              <a href="tel:+0800-000-00" class="link">0800-000-00</a>
+            </p>
+            <p class="contact mail">
+              <span class="material-symbols-outlined contact-icon"> mail </span>
+              <a href="mailto: glasses@business.com" class="link"
+                >glasses@business.com</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="right-container d-flex">
+          <p class="copy-right">
+            Copyright © 2020 Glasses.All rights reserved.
+          </p>
+          <ul class="privacy-list d-flex">
             <li class="list-item">
-              <a href="./index.html" class="footer-link link">首頁</a>
+              <a href="#" class="footer-link link">隱私權政策</a>
             </li>
             <li class="list-item">
-              <a href="./optical.html" class="footer-link link ml-8">系列鏡框</a>
-            </li>
-            <li class="list-item">
-              <a href="./location.html" class="footer-link link ml-8">門市據點</a>
-            </li>
-            <li class="list-item">
-              <a href="#" class="footer-link link ml-8">部落格</a>
-            </li>
-            <li class="list-item">
-              <a href="./question.html" class="footer-link link ml-8">常見問題</a>
-            </li>
-          </ul>
-          <ul class="footer-icons container">
-            <li class="footer-icon">
-              <a href="#" class="icon-link"
-                ><img
-                  src="./assets/images/ic-social-fb.png"
-                  alt="facebook icon"
-                  class="icon-img"
-              /></a>
-            </li>
-            <li class="footer-icon">
-              <a href="#" class="icon-link"
-                ><img
-                  src="./assets/images/ic_social_ig.png"
-                  alt="ig-icon"
-                  class="icon-img"
-              /></a>
-            </li>
-            <li class="footer-icon">
-              <a href="#" class="icon-link"
-                ><img
-                  src="./assets/images/ic_social_line.png"
-                  alt="line-icon"
-                  class="icon-img"
-              /></a>
+              <a href="#" class="footer-link link">服務條款</a>
             </li>
           </ul>
         </div>
-        <div class="contact-container">
-          <p class="contact tel">
-            <span class="material-symbols-outlined contact-icon"> call </span>
-            Tel: <a href="tel:+0800-000-00" class="link">0800-000-00</a>
-          </p>
-          <p class="contact mail">
-            <span class="material-symbols-outlined contact-icon"> mail </span>
-            Mail:
-            <a href="mailto: glasses@business.com" class="link"
-              >glasses@business.com</a
-            >
-          </p>
-        </div>
-      </div>
-      <div class="right-container container">
-        <p class="copy-right">Copyright © 2020 Glasses.All rights reserved.</p>
-        <ul class="privacy-list container">
-          <li class="list-item">
-            <a href="#" class="footer-link link">隱私權政策</a>
-          </li>
-          <li class="list-item">
-            <a href="#" class="footer-link link">服務條款</a>
-          </li>
-        </ul>
       </div>
     </footer>
     <script src="./assets/js/vendors.js"></script>
